@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - EDGE CINEMA</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: #FAF7F0;
+            color: #4A4947;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1440px;
+            padding: 20px;
+        }
+
+        /* Header */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #4A4947;
+            color: #FAF7F0;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            padding: 15px;
+        }
+
+        .header .logo img {
+            width: 120px;
+        }
+
+        .header-buttons {
+            display: flex;
+            gap: 10px;
+        }
+
+        .header-buttons button {
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            color: #FAF7F0;
+        }
+
+        .header-buttons .ticket-btn {
+            background-color: #B17457;
+        }
+
+        .header-buttons .ticket-btn a {
+            color: white;
+        }
+
+        .header-buttons .logout-btn {
+            background-color: #D8D2C2;
+            color: #4A4947;
+        }
+
+        .header-buttons .logout-btn a {
+            color: white;
+        }
+
+        /* Movie Grid */
+        .movie-grid {
+            display: grid;
+            gap: 15px;
+            max-height: 500px;
+            overflow-y: auto;
+            padding-right: 5px;
+        }
+
+        /* Desktop and tablet grid layout */
+        @media (min-width: 769px) {
+            .movie-grid {
+                grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            }
+        }
+
+        /* Mobile grid layout */
+        @media (max-width: 768px) {
+            .movie-grid {
+                grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+                max-height: 400px; 
+            }
+        }
+
+        /* Smaller mobile grid layout */
+        @media (max-width: 480px) {
+            .movie-grid {
+                grid-template-columns: 1fr;
+                max-height: 300px;
+            }
+        }
+
+        .movie-item {
+            background-color: #B17457;
+            color: #FAF7F0;
+            border-radius: 8px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .movie-item:hover {
+            transform: scale(1.05);
+        }
+
+        .movie-item img {
+            width: 100%;
+            height: 260px;
+            border-bottom: 2px solid #4A4947;
+        }
+
+        .movie-item h3 {
+            padding: 10px;
+            font-size: 16px;
+        }
+
+    </style>
+    <!-- Hotjar Tracking Code for https://www.edgecnm.com -->
+    <script>
+        (function(h,o,t,j,a,r){
+            h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+            h._hjSettings={hjid:5202102,hjsv:6};
+            a=o.getElementsByTagName('head')[0];
+            r=o.createElement('script');r.async=1;
+            r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+            a.appendChild(r);
+        })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+    </script>
+</head>
+<body>
+
+<div class="container">
+    <div class="header">
+        <div class="logo">
+            <img src="img/logo.png" alt="EDGE CINEMA Logo">
+        </div>
+        <div class="header-buttons">
+            <button class="ticket-btn"><a href="tiketsaya.html">Tiket Saya</button></a>
+            <button class="logout-btn"><a href="index.html"> Log out</button></a>
+        </div>
+    </div>
+
+    <div class="movie-grid">
+        <!-- Movie Item -->
+        <div class="movie-item">
+            <img src="img/f10.jpg" alt="Furiosa: A Mad Max Saga">
+            <h3>Dune</h3>
+        </div>
+        <div class="movie-item">
+            <img src="img/f13.jpg" alt="Joker: Folie à Deux"> 
+            <h3>Those About to Die</h3>
+        </div>
+        <div class="movie-item">
+            <img src="img/f9.jpg" alt="Road House"> 
+            <h3>Road House</h3>
+        </div>
+        <div class="movie-item">
+            <img src="img/f11.jpg" alt="Deadpool 3"> 
+            <h3>Deadpool 3</h3>
+        </div>
+        <div class="movie-item">
+            <img src="img/f6.jpg" alt="kungfu4"> 
+            <h3>Kungfu Panda 4</h3>
+        </div>
+        <div class="movie-item">
+            <img src="img/f7.jpg" alt="mydemon"> 
+            <h3>My Demon</h3>
+        </div>
+        <div class="movie-item">
+            <img src="img/f8.jpg" alt="ofbb"> 
+            <h3>Officer Black Belt</h3>
+        </div>
+        <div class="movie-item">
+            <a href="pemesanantiket.html"><img src="img/joker1.jpg" alt="jk"></a>
+            <h3>Joker</h3>
+        </div>
+        <div class="movie-item">
+            <img src="img/f12.jpg" alt="theringsofpower"> 
+            <h3>The Rings of Power</h3>
+        </div>
+        <div class="movie-item">
+            <img src="img/f13.jpg" alt="tatd"> 
+            <h3>Those About to Die</h3>
+        </div>
+        <div class="movie-item">
+            <img src="img/f14.jpg" alt="bt"> 
+            <h3>Blink Twice</h3>
+        </div>
+        <div class="movie-item">
+            <img src="img/f15.jpg" alt="HTMMBGD"> 
+            <h3>How To Make Million Before Grandma Dies</h3>
+        </div>
+        <div class="movie-item">
+            <img src="img/f16.jpg" alt="alien"> 
+            <h3>ALIEN</h3>
+        </div>
+        <div class="movie-item">
+            <img src="img/f17.jpg" alt="pilot"> 
+            <h3>Pilot</h3>
+        </div>
+        <div class="movie-item">
+            <img src="img/f18.jpg" alt="exorcism"> 
+            <h3>The Exorcism</h3>
+        </div>
+        <div class="movie-item">
+            <img src="img/f19.jpg" alt="transformers"> 
+            <h3>Transformers One</h3>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
